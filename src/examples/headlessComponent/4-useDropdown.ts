@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 interface Item {
   icon: string;
@@ -10,6 +10,7 @@ const useDropdown = (items: Item[]) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState<Item | null>(null);
   const [selectedIndex, setSelectedIndex] = useState(-1);
+  const ref = useRef<HTMLDivElement>(null);
 
   const getAriaAttribtes = () => ({
     role: "combobox",
@@ -42,6 +43,7 @@ const useDropdown = (items: Item[]) => {
     setSelectedItem,
     selectedIndex,
     getAriaAttribtes,
+    ref,
   };
 };
 
