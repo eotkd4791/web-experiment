@@ -1,7 +1,7 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import MultiplePromise from "./examples/MultiplePromise";
+import MultipleFileUpload from "./examples/MultipleFileUpload";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -15,7 +15,7 @@ const queryClient = new QueryClient({
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <MultiplePromise />
+      <MultipleFileUpload />
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
