@@ -4,7 +4,8 @@ import {
   type InputHTMLAttributes,
   type PropsWithChildren,
   useEffect,
-  useMemo,
+  memo,
+  useState,
 } from "react";
 
 type FileUploadProps = FormHTMLAttributes<HTMLFormElement>;
@@ -30,14 +31,21 @@ type FileUploadPreviewItemProps = {
   w?: number;
   h?: number;
 };
-function FileUploadPreviewItem({ children, file, w = 64, h = 64 }: PropsWithChildren<FileUploadPreviewItemProps>) {
-  const imageUrl = useMemo(() => URL.createObjectURL(file), [file]);
+const FileUploadPreviewItem = memo(function ({
+  children,
+  file,
+  w = 64,
+  h = 64,
+}: PropsWithChildren<FileUploadPreviewItemProps>) {
+  const [imageUrl, setImageUrl] = useState("");
 
   useEffect(() => {
+    setImageUrl(URL.createObjectURL(file));
     return () => {
       URL.revokeObjectURL(imageUrl);
+      setImageUrl("");
     };
-  }, [imageUrl]);
+  }, []);
 
   return (
     <li>
@@ -45,7 +53,7 @@ function FileUploadPreviewItem({ children, file, w = 64, h = 64 }: PropsWithChil
       {children}
     </li>
   );
-}
+});
 
 type FileUploadPreviewTriggerProps = {
   children?: ReactNode;
