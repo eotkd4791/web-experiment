@@ -39,7 +39,9 @@ export default function MultipleFileUpload() {
           ))}
         </FileUpload.Preview>
       ) : null}
-      <button>업로드</button>
+      <FileUpload.Action>
+        <button>업로드</button>
+      </FileUpload.Action>
     </FileUpload>
   );
 }

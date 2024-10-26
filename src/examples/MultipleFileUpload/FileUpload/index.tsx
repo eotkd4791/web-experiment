@@ -43,9 +43,14 @@ function FileUploadPreviewTrigger({ children, asChild, as }: FileUploadPreviewTr
   return asChild ? <button>{children}</button> : <>{as}</>;
 }
 
+function FileUploadAction({ children }: PropsWithChildren) {
+  return <>{children}</>;
+}
+
 FileUpload.Box = FileUploadBox;
 FileUpload.Preview = FileUploadPreview;
 FileUpload.PreviewItem = FileUploadPreviewItem;
 FileUpload.PreviewTrigger = FileUploadPreviewTrigger;
+FileUpload.Action = FileUploadAction;
 
 export default FileUpload;
