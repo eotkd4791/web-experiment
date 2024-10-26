@@ -36,7 +36,7 @@ export default function MultipleFileUpload() {
       {files.length > 0 ? (
         <FileUpload.Preview>
           {files.map((file) => (
-            <FileUpload.PreviewItem key={file.name} file={file}>
+            <FileUpload.PreviewItem key={file.name} file={file} w={64} h={64}>
               <FileUpload.PreviewTrigger as={<DeleteIcon onClick={onDelete(file)} />} />
             </FileUpload.PreviewItem>
           ))}
