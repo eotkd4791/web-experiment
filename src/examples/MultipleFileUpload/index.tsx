@@ -6,21 +6,24 @@ import { Trash2 as DeleteIcon } from "lucide-react";
 import useFileUpload from "./FileUpload/useFileUpload";
 
 export default function MultipleFileUpload() {
-  const { files, addFiles, deleteFile, convertListToArray } = useFileUpload();
-
-  const onSubmit = useCallback(() => {}, []);
+  const { files, convertListToArray, addFiles, deleteFile } = useFileUpload();
 
   const onChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
-    if (event.target.files) {
-      const uploadedFiles = convertListToArray(event.target.files);
+    const { files } = event.target;
+    if (files) {
+      const uploadedFiles = convertListToArray(files);
       addFiles(uploadedFiles);
     }
   }, []);
 
+  const onSubmit = useCallback(() => {
+    // 업로드 API 호출 로직
+  }, []);
+
   const onDrop = useCallback((event: DragEvent<HTMLInputElement>) => {
-    event.preventDefault();
-    if (event.dataTransfer.files) {
-      const uploadedFiles = convertListToArray(event.dataTransfer.files);
+    const { files } = event.dataTransfer;
+    if (files) {
+      const uploadedFiles = convertListToArray(files);
       addFiles(uploadedFiles);
     }
   }, []);
