@@ -7,6 +7,18 @@ import {
 } from "react";
 
 type FileUploadProps = FormHTMLAttributes<HTMLFormElement>;
+type FileUploadBoxProps = InputHTMLAttributes<HTMLInputElement>;
+type FileUploadPreviewItemProps = {
+  file: File;
+  w?: number;
+  h?: number;
+};
+type FileUploadPreviewTriggerProps = {
+  children?: ReactNode;
+  asChild?: boolean;
+  as?: ReactNode;
+};
+
 function FileUpload({ children, ...formAttrs }: PropsWithChildren<FileUploadProps>) {
   return <form {...formAttrs}>{children}</form>;
 }
@@ -32,13 +44,8 @@ function FileUploadPreviewItem({ children, file, w, h }: PropsWithChildren<FileU
       {children}
     </li>
   );
-});
+}
 
-type FileUploadPreviewTriggerProps = {
-  children?: ReactNode;
-  asChild?: boolean;
-  as?: ReactNode;
-};
 function FileUploadPreviewTrigger({ children, asChild, as }: FileUploadPreviewTriggerProps) {
   return asChild ? <button>{children}</button> : <>{as}</>;
 }
