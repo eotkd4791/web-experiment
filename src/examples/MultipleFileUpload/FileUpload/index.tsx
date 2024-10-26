@@ -13,8 +13,7 @@ function FileUpload({ children, ...formAttrs }: PropsWithChildren<FileUploadProp
   return <form {...formAttrs}>{children}</form>;
 }
 
-type FileUploadDropZoneProps = InputHTMLAttributes<HTMLInputElement>;
-function FileUploadDropZone({ ...fileInputAttrs }: FileUploadDropZoneProps) {
+function FileUploadBox({ ...fileInputAttrs }: FileUploadBoxProps) {
   return (
     <label>
       <input type="file" {...fileInputAttrs} />
@@ -64,7 +63,7 @@ function FileUploadPreviewTrigger({ children, asChild, as }: FileUploadPreviewTr
   return asChild ? <button>{children}</button> : <>{as}</>;
 }
 
-FileUpload.DropZone = FileUploadDropZone;
+FileUpload.Box = FileUploadBox;
 FileUpload.Preview = FileUploadPreview;
 FileUpload.PreviewItem = FileUploadPreviewItem;
 FileUpload.PreviewTrigger = FileUploadPreviewTrigger;

@@ -29,14 +29,7 @@ export default function MultipleFileUpload() {
 
   return (
     <FileUpload onSubmit={onSubmit}>
-      <FileUpload.DropZone
-        multiple
-        onChange={onChange}
-        onDrag={(event) => event.preventDefault()}
-        onDrop={onDrop}
-        onInvalid={console.log}
-        accept="image/*, .pdf"
-      />
+      <FileUpload.Box multiple onChange={onChange} onDrop={onDrop} onInvalid={console.log} accept="image/*, .pdf" />
       {files.length > 0 ? (
         <FileUpload.Preview>
           {files.map((file) => (
