@@ -32,7 +32,7 @@ export default function MultipleFileUpload() {
 
   return (
     <FileUpload onSubmit={onSubmit}>
-      <FileUpload.Box multiple onChange={onChange} onDrop={onDrop} onInvalid={console.log} accept="image/*, .pdf" />
+      <FileUpload.Box multiple onChange={onChange} onDrop={onDrop} accept="image/*, .pdf" />
       {files.length > 0 ? (
         <FileUpload.Preview>
           {files.map((file) => (
