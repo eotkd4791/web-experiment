@@ -76,17 +76,17 @@ class TickerSeller {
 class Theater {
   constructor(private ticketSeller: TickerSeller) {}
 
-  public enter(audidence: Audience) {
-    if (audidence.getBag()?.hasInvitation()) {
+  public enter(audience: Audience) {
+    if (audience.getBag()?.hasInvitation()) {
       const ticket = this.ticketSeller.getTicketOffice().getTicket();
 
-      audidence.getBag()?.setTicket(ticket);
+      audience.getBag()?.setTicket(ticket);
     } else {
       const ticket = this.ticketSeller.getTicketOffice().getTicket();
       if (ticket) {
-        audidence.getBag()?.minusAmount(ticket.getFee());
+        audience.getBag()?.minusAmount(ticket.getFee());
         this.ticketSeller.getTicketOffice().plusAmount(ticket.getFee());
-        audidence.getBag()?.setTicket(ticket);
+        audience.getBag()?.setTicket(ticket);
       }
     }
   }
