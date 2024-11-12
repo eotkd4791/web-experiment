@@ -22,6 +22,7 @@
     "browser-image-compression": "^2.0.2",
     "clsx": "^2.1.1",
     "es-toolkit": "^1.24.0",
+    "immer": "^10.1.1",
     "lucide-react": "^0.453.0",
     "overlay-kit": "^1.4.1",
     "react": "^18.3.1",
