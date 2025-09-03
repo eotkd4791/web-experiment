@@ -12,6 +12,7 @@
     "test": "vitest"
   },
   "dependencies": {
+    "@we/shared": "workspace:*",
     "@faker-js/faker": "^8.4.1",
     "@suspensive/react": "^3.6.0",
     "@tanstack/react-form": "^0.41.4",
