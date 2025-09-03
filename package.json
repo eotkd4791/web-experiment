@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:react": "turbo dev --filter=@we/react",
     "build": "tsc && vite build",
     "check-types": "tsc --noEmit",
     "lint": "eslint .",
