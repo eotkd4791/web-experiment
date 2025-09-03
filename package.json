@@ -12,7 +12,6 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@we/shared": "workspace:*",
     "@faker-js/faker": "^8.4.1",
     "@suspensive/react": "^3.6.0",
     "@tanstack/react-form": "^0.41.4",
@@ -26,6 +25,8 @@
     "@toss/react": "^1.8.1",
     "@use-funnel/browser": "^0.0.7",
     "@use-funnel/react-router-dom": "^0.0.7",
+    "@we/react": "workspace:*",
+    "@we/shared": "workspace:*",
     "ajv": "^8.17.1",
     "browser-image-compression": "^2.0.2",
     "clsx": "^2.1.1",
