@@ -12,28 +12,13 @@ type DropdownProps = {
 };
 
 const Dropdown = ({ items }: DropdownProps) => {
-  const {
-    isOpen,
-    selectedItem,
-    selectedIndex,
-    toggleDropdown,
-    handleKeyDown,
-    setSelectedItem,
-  } = useDropdown(items);
+  const { isOpen, selectedItem, selectedIndex, toggleDropdown, handleKeyDown, setSelectedItem } =
+    useDropdown(items);
 
   return (
     <div className="dropdown" onKeyDown={handleKeyDown}>
-      <Trigger
-        label={selectedItem ? selectedItem.text : "Select an item..."}
-        onClick={toggleDropdown}
-      />
-      {isOpen && (
-        <DropdownMenu
-          items={items}
-          selectedIndex={selectedIndex}
-          onItemClick={setSelectedItem}
-        />
-      )}
+      <Trigger label={selectedItem ? selectedItem.text : "Select an item..."} onClick={toggleDropdown} />
+      {isOpen && <DropdownMenu items={items} selectedIndex={selectedIndex} onItemClick={setSelectedItem} />}
     </div>
   );
 };
@@ -57,21 +42,14 @@ type DropdownMenuProps = {
   onItemClick: (item: Item) => void;
 };
 
-const DropdownMenu = ({
-  items,
-  selectedIndex,
-  onItemClick,
-}: DropdownMenuProps) => {
+const DropdownMenu = ({ items, selectedIndex, onItemClick }: DropdownMenuProps) => {
   return (
     <div className="dropdown-menu" role="listbox">
       {items.map((item, index) => (
         <div
           key={index}
           onClick={() => onItemClick(item)}
-          className={cn(
-            "item-container",
-            selectedIndex === index && "selected-item"
-          )}
+          className={cn("item-container", selectedIndex === index && "selected-item")}
         >
           <img src={item.icon} alt={item.text} />
           <div className="details">
