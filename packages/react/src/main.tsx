@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
+import "./index.css";
 
 // async function enableMocking() {
 //   const { worker } = await import("./mocks/browser");
