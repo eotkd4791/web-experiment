@@ -6,11 +6,14 @@
   "scripts": {
     "react": "pnpm -F @we/react",
     "dev:react": "turbo dev --filter=@we/react",
-    "test:react": "turbo test --filter=@we/react"
+    "dev:api": "turbo dev --filter=@we/api",
+    "test:react": "turbo test --filter=@we/react",
+    "test:api": "turbo test --filter=@we/api"
   },
   "dependencies": {
     "@we/react": "workspace:*",
-    "@we/shared": "workspace:*"
+    "@we/shared": "workspace:*",
+    "@we/api": "workspace:*"
   },
   "devDependencies": {
     "@eslint/js": "^9.34.0",
