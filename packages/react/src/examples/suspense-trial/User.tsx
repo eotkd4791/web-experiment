@@ -1,4 +1,5 @@
-import { type User, userResource } from "./api";
+import { userResource } from "./api";
+import { type User } from "./types";
 
 type Props = {
   id: User["id"];
