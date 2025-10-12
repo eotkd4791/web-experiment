@@ -20,3 +20,11 @@ export const userResource = (id: User["id"]) => {
 export function fetchUser(id: User["id"]) {
   return fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
 }
+
+export function fetchUsers() {
+  return fetch("https://jsonplaceholder.typicode.com/users");
+}
+
+export function fetchPosts() {
+  return fetch("https://jsonplaceholder.typicode.com/posts");
+}
