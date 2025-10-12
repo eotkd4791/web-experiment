@@ -5,6 +5,7 @@ type ResponseStatus<T> = Pending | Fulfilled<T> | Rejected;
 
 export function createResource<T>(load: () => Promise<T>) {
   let response: ResponseStatus<T> | null = null;
+  return { read, preload, invalidate };
 
   function read() {
     if (!response) preload();
@@ -38,6 +39,4 @@ export function createResource<T>(load: () => Promise<T>) {
   function invalidate() {
     response = null;
   }
-
-  return { read, preload, invalidate };
 }
