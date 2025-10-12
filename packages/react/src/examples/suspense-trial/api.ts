@@ -17,6 +17,6 @@ export const userResource = (id: User["id"]) => {
   return userResourceCache.get(id)!;
 };
 
-function fetchUser(id: User["id"]) {
+export function fetchUser(id: User["id"]) {
   return fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
 }
