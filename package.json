@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "react": "pnpm -F @we/react",
+    "dev": "turbo dev",
     "dev:react": "turbo dev --filter=@we/react",
     "dev:api": "turbo dev --filter=@we/api",
     "test:react": "turbo test --filter=@we/react",
