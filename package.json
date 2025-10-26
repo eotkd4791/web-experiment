@@ -6,14 +6,17 @@
   "scripts": {
     "dev": "turbo dev",
     "dev:react": "turbo dev --filter=@we/react",
+    "dev:ssr": "turbo dev --filter=@we/ssr",
     "dev:api": "turbo dev --filter=@we/api",
     "test:react": "turbo test --filter=@we/react",
+    "test:ssr": "turbo test --filter=@we/ssr",
     "test:api": "turbo test --filter=@we/api"
   },
   "dependencies": {
     "@we/react": "workspace:*",
     "@we/shared": "workspace:*",
-    "@we/api": "workspace:*"
+    "@we/api": "workspace:*",
+    "@we/ssr": "workspace:*"
   },
   "devDependencies": {
     "@eslint/js": "^9.34.0",
