@@ -27,6 +27,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.0.0",
     "jsdom": "^27.0.0",
+    "msw": "^2.11.4",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vite-tsconfig-paths": "^5.1.4",
