@@ -1,4 +1,4 @@
-/// <reference types="vitest" />
+/// <reference types="vitest/config" />
 
 import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
@@ -13,7 +13,6 @@ export default defineConfig({
     environment: "jsdom",
     setupFiles: ["./setupTest.ts"],
     passWithNoTests: true,
-    include: ["./src/tests/**/*.(test|spec).(ts|tsx)"],
     mockReset: true,
     clearMocks: true,
   },

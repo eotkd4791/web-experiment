@@ -8,7 +8,7 @@
     "dev:react": "turbo dev --filter=@we/react",
     "dev:ssr": "turbo dev --filter=@we/ssr",
     "dev:api": "turbo dev --filter=@we/api",
-    "test:react": "turbo test --filter=@we/react",
+    "test:react": "turbo run test --filter=@we/react",
     "test:ssr": "turbo test --filter=@we/ssr",
     "test:api": "turbo test --filter=@we/api"
   },
