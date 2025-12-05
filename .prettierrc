@@ -4,6 +4,6 @@
   "trailingComma": "all",
   "arrowParens": "always",
   "tabWidth": 2,
-  "singleQuote": false,
+  "singleQuote": true,
   "quoteProps": "consistent"
 }
