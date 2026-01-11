@@ -13,15 +13,20 @@
     "test:api": "turbo test --filter=@we/api"
   },
   "dependencies": {
+    "@we/api": "workspace:*",
     "@we/react": "workspace:*",
     "@we/shared": "workspace:*",
-    "@we/api": "workspace:*",
     "@we/ssr": "workspace:*"
   },
   "devDependencies": {
     "@eslint/js": "^9.34.0",
+    "@tanstack/eslint-plugin-query": "^5.91.2",
+    "eslint-plugin-react-hooks": "^7.0.0",
+    "eslint-plugin-react-refresh": "^0.4.23",
+    "globals": "^17.0.0",
+    "prettier": "^3.6.2",
     "turbo": "^2.5.6",
-    "prettier": "^3.6.2"
+    "typescript-eslint": "^8.51.0"
   },
   "packageManager": "pnpm@10.10.0"
 }
