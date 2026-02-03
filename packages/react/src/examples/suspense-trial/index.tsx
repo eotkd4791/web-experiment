@@ -1,6 +1,6 @@
-import { Suspense, useState, startTransition } from "react";
-import { ErrorBoundary } from "react-error-boundary";
-import { User } from "./User";
+import { Suspense, useState, startTransition } from 'react';
+import { ErrorBoundary } from 'react-error-boundary';
+import { User } from './User';
 
 export function SuspenseTrial() {
   const [userId, setUserId] = useState(1);

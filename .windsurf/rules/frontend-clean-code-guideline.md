@@ -133,7 +133,7 @@ src/
 │   │   │   └── UserProfileCard.tsx
 │   │   ├── hooks/
 │   │   │   └── useUser.ts
-│   │   └── index.ts # Optional barrel file
+│   │   └── index.tsx # Optional barrel file
 │   ├── product/
 │   │   ├── components/
 │   │   │   └── ProductList.tsx
