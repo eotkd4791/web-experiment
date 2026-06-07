@@ -20,17 +20,17 @@ export class TodoController {
   constructor(private readonly todoService: TodoService) {}
 
   @Get()
-  findAll(@Query('state') state?: State): Todo[] {
+  findAll(@Query('state') state?: State): Promise<Todo[]> {
     return this.todoService.findAll(state);
   }
 
   @Get(':id')
-  findOne(@Param('id', ParseIntPipe) id: number): Todo {
+  findOne(@Param('id', ParseIntPipe) id: number): Promise<Todo> {
     return this.todoService.findOne(id);
   }
 
   @Post()
-  create(@Body() createTodoDto: CreateTodoDto): TodoResponseDto {
+  create(@Body() createTodoDto: CreateTodoDto): Promise<TodoResponseDto> {
     return this.todoService.create(createTodoDto);
   }
 
@@ -38,12 +38,12 @@ export class TodoController {
   update(
     @Param('id', ParseIntPipe) id: number,
     @Body() updateTodoDto: UpdateTodoDto,
-  ): TodoResponseDto {
+  ): Promise<TodoResponseDto> {
     return this.todoService.update(id, updateTodoDto);
   }
 
   @Delete(':id')
-  delete(@Param('id', ParseIntPipe) id: number): void {
+  delete(@Param('id', ParseIntPipe) id: number): Promise<void> {
     return this.todoService.delete(id);
   }
 }

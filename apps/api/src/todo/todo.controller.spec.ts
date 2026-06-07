@@ -4,11 +4,23 @@ import { TodoService } from './todo.service';
 
 describe('TodoController', () => {
   let controller: TodoController;
+  const todoService = {
+    findAll: jest.fn(),
+    findOne: jest.fn(),
+    create: jest.fn(),
+    update: jest.fn(),
+    delete: jest.fn(),
+  };
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [TodoController],
-      providers: [TodoService],
+      providers: [
+        {
+          provide: TodoService,
+          useValue: todoService,
+        },
+      ],
     }).compile();
 
     controller = module.get<TodoController>(TodoController);
