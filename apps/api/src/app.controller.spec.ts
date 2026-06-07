@@ -15,8 +15,14 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.getHello()).toBe('Hello World!');
+    it('should return app metadata', () => {
+      expect(appController.getAppInfo()).toEqual(
+        expect.objectContaining({
+          name: 'web-experiment api',
+          database: 'web-experiment-db',
+          dataset: 'civilian7/sql-tutorial small ko',
+        }),
+      );
     });
   });
 });

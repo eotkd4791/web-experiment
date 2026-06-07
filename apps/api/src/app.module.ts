@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { TodoModule } from './todo/todo.module';
 import { DbModule } from './db/db.module';
+import { EcommerceModule } from './ecommerce/ecommerce.module';
 
 @Module({
-  imports: [TodoModule, DbModule],
+  imports: [DbModule, EcommerceModule],
   controllers: [AppController],
   providers: [AppService],
 })

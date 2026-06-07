@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppController (e2e) /commerce/customers/top (GET) 1`] = `
+[
+  {
+    "email": "user226@testmail.kr",
+    "grade": "VIP",
+    "id": 226,
+    "name": "박정수",
+    "orderCount": 302,
+    "totalSpend": 403081258,
+  },
+  {
+    "email": "user97@testmail.kr",
+    "grade": "VIP",
+    "id": 97,
+    "name": "김병철",
+    "orderCount": 340,
+    "totalSpend": 362705631,
+  },
+  {
+    "email": "user162@testmail.kr",
+    "grade": "VIP",
+    "id": 162,
+    "name": "강명자",
+    "orderCount": 249,
+    "totalSpend": 253180338,
+  },
+]
+`;
+
+exports[`AppController (e2e) /commerce/products/best-sellers (GET) 1`] = `
+[
+  {
+    "productId": 75,
+    "productName": "Crucial T700 2TB 실버",
+    "soldQuantity": 1503,
+  },
+  {
+    "productId": 44,
+    "productName": "AMD Ryzen 9 9900X",
+    "soldQuantity": 1447,
+  },
+  {
+    "productId": 87,
+    "productName": "SK하이닉스 Platinum P41 2TB 실버",
+    "soldQuantity": 1359,
+  },
+]
+`;
