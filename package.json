@@ -8,6 +8,8 @@
     "dev:react": "turbo dev --filter=@we/react",
     "dev:ssr": "turbo dev --filter=@we/ssr",
     "dev:api": "turbo dev --filter=@we/api",
+    "build": "turbo build",
+    "typecheck:api": "pnpm --filter @we/api typecheck",
     "test:react": "turbo test --filter=@we/react",
     "test:ssr": "turbo test --filter=@we/ssr",
     "test:api": "turbo test --filter=@we/api"
@@ -29,6 +31,7 @@
     "globals": "^17.6.0",
     "prettier": "^3.8.3",
     "turbo": "^2.9.16",
+    "typescript": "^5.9.3",
     "typescript-eslint": "^8.60.1"
   },
   "packageManager": "pnpm@10.10.0"
