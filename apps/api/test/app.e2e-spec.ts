@@ -6,6 +6,7 @@ import { AppModule } from './../src/app.module';
 interface RootResponse {
   name: string;
   routes: {
+    docs: string;
     dashboard: string;
   };
 }
@@ -36,6 +37,7 @@ describe('AppController (e2e)', () => {
         const response = body as RootResponse;
 
         expect(response.name).toBe('web-experiment api');
+        expect(response.routes.docs).toBe('/docs');
         expect(response.routes.dashboard).toBe('/commerce/dashboard');
       });
   });

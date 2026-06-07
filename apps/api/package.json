@@ -28,11 +28,13 @@
     "@nestjs/core": "^11.1.24",
     "@nestjs/mapped-types": "^2.1.1",
     "@nestjs/platform-express": "^11.1.24",
+    "@nestjs/swagger": "^11.4.4",
     "dotenv": "^17.4.2",
     "drizzle-orm": "^0.45.2",
     "pg": "^8.21.0",
     "reflect-metadata": "^0.2.2",
-    "rxjs": "^7.8.2"
+    "rxjs": "^7.8.2",
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.5",
