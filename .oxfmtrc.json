@@ -8,6 +8,7 @@
   "singleQuote": true,
   "quoteProps": "consistent",
   "sortPackageJson": false,
+  "ignorePatterns": ["apps/storybook/storybook-static/**"],
   "overrides": [
     {
       "files": ["apps/api/**/*.ts"],

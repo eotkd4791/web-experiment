@@ -14,6 +14,8 @@
     "format": "turbo format",
     "format:check": "turbo format:check",
     "typecheck": "turbo typecheck",
+    "storybook": "turbo storybook --filter=@app/storybook",
+    "build-storybook": "turbo build-storybook --filter=@app/storybook",
     "test:api": "turbo test --filter=@app/api",
     "test:next": "turbo test --filter=@app/next",
     "test:react": "turbo test --filter=@package/react",

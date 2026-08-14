@@ -32,6 +32,14 @@
     "format:check": {
       "cache": true,
       "outputs": []
+    },
+    "storybook": {
+      "cache": false,
+      "persistent": true
+    },
+    "build-storybook": {
+      "cache": true,
+      "outputs": ["storybook-static/**"]
     }
   }
 }
