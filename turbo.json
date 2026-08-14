@@ -14,6 +14,22 @@
     },
     "test": {
       "cache": true
+    },
+    "lint": {
+      "cache": true,
+      "outputs": []
+    },
+    "lint:fix": {
+      "cache": false,
+      "outputs": []
+    },
+    "format": {
+      "cache": false,
+      "outputs": []
+    },
+    "format:check": {
+      "cache": true,
+      "outputs": []
     }
   }
 }

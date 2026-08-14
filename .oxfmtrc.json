@@ -1,0 +1,21 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "semi": true,
+  "printWidth": 110,
+  "trailingComma": "all",
+  "arrowParens": "always",
+  "tabWidth": 2,
+  "singleQuote": true,
+  "quoteProps": "consistent",
+  "sortPackageJson": false,
+  "overrides": [
+    {
+      "files": ["apps/api/**/*.ts"],
+      "options": {
+        "printWidth": 80,
+        "quoteProps": "as-needed",
+        "endOfLine": "lf"
+      }
+    }
+  ]
+}

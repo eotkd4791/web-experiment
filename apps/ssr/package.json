@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
+    "lint": "oxlint --config ../../.oxlintrc.json . && eslint .",
+    "lint:fix": "oxlint --config ../../.oxlintrc.json --fix . && eslint --fix .",
+    "format": "oxfmt --config ../../.oxfmtrc.json --write .",
+    "format:check": "oxfmt --config ../../.oxfmtrc.json --check .",
     "test": "vitest"
   },
   "dependencies": {
