@@ -1,5 +1,5 @@
-import { useQuery } from "@tanstack/react-query";
-import { useEffect } from "react";
+import { useQuery } from '@tanstack/react-query';
+import { useEffect } from 'react';
 
 interface Todo {
   userId: number;
@@ -9,7 +9,7 @@ interface Todo {
 }
 export function useCustomHook({ id }: { id: number }) {
   const { data: result } = useQuery<Todo>({
-    queryKey: ["todo", id],
+    queryKey: ['todo', id],
     queryFn: () =>
       fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
         .then((response) => response.json())
@@ -18,7 +18,7 @@ export function useCustomHook({ id }: { id: number }) {
   });
 
   useEffect(() => {
-    console.log("result is rendering", result);
+    console.log('result is rendering', result);
   }, [result]);
 
   return { result };

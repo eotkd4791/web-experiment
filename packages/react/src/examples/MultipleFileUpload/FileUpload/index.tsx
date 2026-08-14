@@ -4,7 +4,7 @@ import {
   type InputHTMLAttributes,
   type PropsWithChildren,
   useMemo,
-} from "react";
+} from 'react';
 
 type FileUploadProps = FormHTMLAttributes<HTMLFormElement>;
 type FileUploadBoxProps = InputHTMLAttributes<HTMLInputElement>;

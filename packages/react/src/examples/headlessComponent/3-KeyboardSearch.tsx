@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { cn } from "../../utils/cn";
+import { useState } from 'react';
+import { cn } from '../../utils/cn';
 
 interface Item {
   icon: string;
@@ -18,14 +18,14 @@ const Dropdown = ({ items }: DropdownProps) => {
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     switch (e.key) {
-      case "ArrowDown":
+      case 'ArrowDown':
         setSelectedIndex((prev) => prev + 1);
         break;
-      case "ArrowUp":
+      case 'ArrowUp':
         setSelectedIndex((prev) => prev - 1);
         break;
-      case "Enter":
-      case "Space":
+      case 'Enter':
+      case 'Space':
         break;
     }
   };
@@ -33,7 +33,7 @@ const Dropdown = ({ items }: DropdownProps) => {
   return (
     <div className="dropdown" onKeyDown={handleKeyDown}>
       <Trigger
-        label={selectedItem ? selectedItem.text : "Select an item..."}
+        label={selectedItem ? selectedItem.text : 'Select an item...'}
         onClick={() => setIsOpen((prev) => !prev)}
       />
       {isOpen && <DropdownMenu items={items} selectedIndex={selectedIndex} onItemClick={setSelectedItem} />}
@@ -67,7 +67,7 @@ const DropdownMenu = ({ items, selectedIndex, onItemClick }: DropdownMenuProps) 
         <div
           key={index}
           onClick={() => onItemClick(item)}
-          className={cn("item-container", selectedIndex === index && "selected-item")}
+          className={cn('item-container', selectedIndex === index && 'selected-item')}
         >
           <img src={item.icon} alt={item.text} />
           <div className="details">

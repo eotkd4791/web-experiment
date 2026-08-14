@@ -1,16 +1,16 @@
-import { produce } from "immer";
-import { memo, useReducer } from "react";
+import { produce } from 'immer';
+import { memo, useReducer } from 'react';
 
 const initialState = { x: 0, y: 0 };
 
 const enum Dir {
-  UP = "UP",
-  RIGHT = "RIGHT",
-  DOWN = "DOWN",
-  LEFT = "LEFT",
+  UP = 'UP',
+  RIGHT = 'RIGHT',
+  DOWN = 'DOWN',
+  LEFT = 'LEFT',
 }
 
-function reducer(state: Record<"x" | "y", number>, action: { type: `${Dir}` }) {
+function reducer(state: Record<'x' | 'y', number>, action: { type: `${Dir}` }) {
   return produce(state, (draft) => {
     switch (action.type) {
       case Dir.UP:
@@ -56,11 +56,11 @@ export default function ExampleWithUseReducer() {
 }
 
 const Horizontal = memo(({ x }: { x: number }) => {
-  console.log("horizontal rendering");
+  console.log('horizontal rendering');
   return <section>{x}</section>;
 });
 
 const Vertical = memo(({ y }: { y: number }) => {
-  console.log("vertical rendering");
+  console.log('vertical rendering');
   return <section>{y}</section>;
 });

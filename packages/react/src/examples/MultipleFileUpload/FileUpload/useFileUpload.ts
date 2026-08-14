@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useState } from 'react';
 
 export default function useFileUpload() {
   const [files, _setFiles] = useState<File[]>([]);

@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 
-import { type ChangeEvent, type DragEvent, useCallback } from "react";
-import FileUpload from "./FileUpload";
-import { Trash2 as DeleteIcon } from "lucide-react";
-import useFileUpload from "./FileUpload/useFileUpload";
+import { type ChangeEvent, type DragEvent, useCallback } from 'react';
+import FileUpload from './FileUpload';
+import { Trash2 as DeleteIcon } from 'lucide-react';
+import useFileUpload from './FileUpload/useFileUpload';
 
 export default function MultipleFileUpload() {
   const { files, convertListToArray, addFiles, deleteFile } = useFileUpload();

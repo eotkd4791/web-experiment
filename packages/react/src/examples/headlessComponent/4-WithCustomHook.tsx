@@ -1,5 +1,5 @@
-import { cn } from "../../utils/cn";
-import useDropdown from "./4-useDropdown";
+import { cn } from '../../utils/cn';
+import useDropdown from './4-useDropdown';
 
 interface Item {
   icon: string;
@@ -17,7 +17,7 @@ const Dropdown = ({ items }: DropdownProps) => {
 
   return (
     <div className="dropdown" onKeyDown={handleKeyDown}>
-      <Trigger label={selectedItem ? selectedItem.text : "Select an item..."} onClick={toggleDropdown} />
+      <Trigger label={selectedItem ? selectedItem.text : 'Select an item...'} onClick={toggleDropdown} />
       {isOpen && <DropdownMenu items={items} selectedIndex={selectedIndex} onItemClick={setSelectedItem} />}
     </div>
   );
@@ -49,7 +49,7 @@ const DropdownMenu = ({ items, selectedIndex, onItemClick }: DropdownMenuProps) 
         <div
           key={index}
           onClick={() => onItemClick(item)}
-          className={cn("item-container", selectedIndex === index && "selected-item")}
+          className={cn('item-container', selectedIndex === index && 'selected-item')}
         >
           <img src={item.icon} alt={item.text} />
           <div className="details">

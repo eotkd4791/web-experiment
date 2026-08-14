@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useState } from "react";
-import ManyRendering from "./ManyRendering";
+import { useCallback, useEffect, useState } from 'react';
+import ManyRendering from './ManyRendering';
 
 export default function Rerender() {
   const [, setState] = useState(0);
@@ -8,7 +8,7 @@ export default function Rerender() {
   useEffect(() => {
     setTimeout(() => {
       setState(1);
-      console.log("updated");
+      console.log('updated');
     }, 1000);
   }, []);
 

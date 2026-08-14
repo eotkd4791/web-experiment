@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState } from 'react';
 
 interface Item {
   icon: string;
@@ -13,21 +13,21 @@ const useDropdown = (items: Item[]) => {
   const ref = useRef<HTMLDivElement>(null);
 
   const getAriaAttribtes = () => ({
-    role: "combobox",
-    "aria-expanded": isOpen,
-    "aria-activedescendant": selectedItem ? selectedItem.text : undefined,
+    'role': 'combobox',
+    'aria-expanded': isOpen,
+    'aria-activedescendant': selectedItem ? selectedItem.text : undefined,
   });
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     switch (e.key) {
-      case "ArrowDown":
+      case 'ArrowDown':
         setSelectedIndex((prev) => (prev + 1 === items.length ? 0 : prev + 1));
         break;
-      case "ArrowUp":
+      case 'ArrowUp':
         setSelectedIndex((prev) => (prev - 1 === 0 ? 0 : items.length - 1));
         break;
-      case "Enter":
-      case "Space":
+      case 'Enter':
+      case 'Space':
         setSelectedItem(items[selectedIndex]);
         break;
     }

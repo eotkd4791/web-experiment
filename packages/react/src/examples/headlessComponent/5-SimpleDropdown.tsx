@@ -1,4 +1,4 @@
-import useDropdown from "./4-useDropdown";
+import useDropdown from './4-useDropdown';
 
 interface Item {
   icon: string;
@@ -22,12 +22,7 @@ const SimpleDropdown = ({ items }: DropdownProps) => {
   } = useDropdown(items);
 
   return (
-    <div
-      tabIndex={0}
-      ref={dropdownRef}
-      {...getAriaAttribtes()}
-      className="dropdown"
-    >
+    <div tabIndex={0} ref={dropdownRef} {...getAriaAttribtes()} className="dropdown">
       <button className="trigger" onClick={toggleDropdown}>
         Select
       </button>

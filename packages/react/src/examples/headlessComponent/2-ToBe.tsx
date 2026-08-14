@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 interface Item {
   icon: string;
@@ -17,7 +17,7 @@ const Dropdown = ({ items }: DropdownProps) => {
   return (
     <div className="dropdown">
       <Trigger
-        label={selectedItem ? selectedItem.text : "Select an item..."}
+        label={selectedItem ? selectedItem.text : 'Select an item...'}
         onClick={() => setIsOpen((prev) => !prev)}
       />
       {isOpen && <DropdownMenu items={items} onItemClick={setSelectedItem} />}
@@ -47,11 +47,7 @@ const DropdownMenu = ({ items, onItemClick }: DropdownMenuProps) => {
   return (
     <div className="dropdown-menu">
       {items.map((item, index) => (
-        <div
-          key={index}
-          onClick={() => onItemClick(item)}
-          className="item-container"
-        >
+        <div key={index} onClick={() => onItemClick(item)} className="item-container">
           <img src={item.icon} alt={item.text} />
           <div className="details">
             <div>{item.text}</div>

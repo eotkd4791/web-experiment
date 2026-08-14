@@ -1,15 +1,15 @@
 /// <reference types="vitest" />
 
-import "@testing-library/jest-dom";
-import { server } from "./test/mocks/server";
+import '@testing-library/jest-dom';
+import { server } from './test/mocks/server';
 
-beforeAll(() => server.listen({ onUnhandledRequest: "error" }));
+beforeAll(() => server.listen({ onUnhandledRequest: 'error' }));
 
 afterEach(() => server.resetHandlers());
 
 afterAll(() => server.close());
 
-vi.mock("next/navigation", () => {
+vi.mock('next/navigation', () => {
   return {
     useRouter: () => ({
       push: vi.fn(),
@@ -17,7 +17,7 @@ vi.mock("next/navigation", () => {
       back: vi.fn(),
       prefetch: vi.fn(),
     }),
-    usePathname: () => "/",
+    usePathname: () => '/',
     useSearchParams: () => new URLSearchParams(),
   };
 });

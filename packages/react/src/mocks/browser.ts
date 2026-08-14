@@ -1,5 +1,5 @@
-import { setupWorker } from "msw/browser";
-import { handlers as mutationKeyExampleHandlers } from "../examples/mutationKey/handlers";
+import { setupWorker } from 'msw/browser';
+import { handlers as mutationKeyExampleHandlers } from '../examples/mutationKey/handlers';
 
 const handlers = [...mutationKeyExampleHandlers];
 

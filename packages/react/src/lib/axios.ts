@@ -1,5 +1,5 @@
-import axios, { type AxiosResponse } from "axios";
-import { type HttpClient } from "../types/http";
+import axios, { type AxiosResponse } from 'axios';
+import { type HttpClient } from '../types/http';
 
 export const client: HttpClient = {
   async get<Res>(url: string): Promise<Res> {

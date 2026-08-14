@@ -1,8 +1,8 @@
-type Palette = Record<"red" | "green" | "blue", [number, number, number] | string>;
+type Palette = Record<'red' | 'green' | 'blue', [number, number, number] | string>;
 
 const palette1: Palette = {
   red: [255, 0, 0],
-  green: "#00ff00",
+  green: '#00ff00',
   blue: [0, 0, 255],
 };
 
@@ -14,7 +14,7 @@ console.log(normalizedGreen1);
 
 const palette2 = {
   red: [255, 0, 0],
-  green: "#00ff00",
+  green: '#00ff00',
   blue: [0, 0, 255],
 } satisfies Palette;
 

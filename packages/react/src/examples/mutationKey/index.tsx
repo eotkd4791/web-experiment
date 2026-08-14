@@ -1,11 +1,7 @@
-import { fakerKO as faker } from "@faker-js/faker";
-import {
-  useMutation,
-  useMutationState,
-  useIsMutating,
-} from "@tanstack/react-query";
+import { fakerKO as faker } from '@faker-js/faker';
+import { useMutation, useMutationState, useIsMutating } from '@tanstack/react-query';
 
-const MUTATION_KEY = { TODO: "TODO" } as const;
+const MUTATION_KEY = { TODO: 'TODO' } as const;
 
 type Todo = {
   title: string;
@@ -17,15 +13,15 @@ export default function Example() {
   const { mutate } = useMutation({
     mutationKey: [MUTATION_KEY.TODO],
     mutationFn: async ({ id, title, body }: Todo) => {
-      const response = await fetch("http://localhost:5173/posts?error=false", {
-        method: "POST",
+      const response = await fetch('http://localhost:5173/posts?error=false', {
+        method: 'POST',
         body: JSON.stringify({
           id,
           title,
           body,
         }),
         headers: {
-          "Content-Type": "application/json; charset=UTF-8",
+          'Content-Type': 'application/json; charset=UTF-8',
         },
       });
 
@@ -33,7 +29,7 @@ export default function Example() {
         return await response.json();
       }
 
-      throw new Error("error");
+      throw new Error('error');
     },
   });
 

@@ -1,15 +1,9 @@
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { useEffect, useState } from 'react';
 
 const countries = ['AU', 'CA', 'CN', 'FR', 'ID', 'IN', 'KR', 'MY', 'NZ', 'SY', 'TH', 'UK', 'US'] as const;
 type Country = (typeof countries)[number];
-
-const getRandomCountry = () => {
-  const index = Math.floor(Math.random() * countries.length);
-  return countries[index];
-};
 
 export const yupSchema = yup.object({
   name: yup.string().required(),
@@ -29,9 +23,7 @@ export const yupSchema = yup.object({
 export type YupSchemaType = yup.InferType<typeof yupSchema>;
 
 export function YupResolver() {
-  const [country, setCountry] = useState('KR');
-
-  console.debug({ country });
+  const country = 'CA';
 
   const {
     register,

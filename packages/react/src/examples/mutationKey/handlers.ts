@@ -1,5 +1,5 @@
-import { http, HttpResponse } from "msw";
-import { fakerKO as faker } from "@faker-js/faker";
+import { http, HttpResponse } from 'msw';
+import { fakerKO as faker } from '@faker-js/faker';
 
 const list = [
   {
@@ -25,16 +25,14 @@ const list = [
 ];
 
 export const handlers = [
-  http.get("http://localhost:5173/posts", () => {
+  http.get('http://localhost:5173/posts', () => {
     return HttpResponse.json(list);
   }),
-  http.post("http://localhost:5173/posts", async ({ request }) => {
+  http.post('http://localhost:5173/posts', async ({ request }) => {
     const requestBody = await request.json();
     const url = new URL(request.url);
-    const isError = url.searchParams.get("error") === "true";
+    const isError = url.searchParams.get('error') === 'true';
 
-    return isError
-      ? new HttpResponse(null, { status: 400 })
-      : HttpResponse.json([...list, requestBody]);
+    return isError ? new HttpResponse(null, { status: 400 }) : HttpResponse.json([...list, requestBody]);
   }),
 ];

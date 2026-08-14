@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import { useState } from "react";
+import { useState } from 'react';
 
 export default function HelloApiButton() {
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState('');
 
   const handleClick = async () => {
-    const res = await fetch("/api/hello");
+    const res = await fetch('/api/hello');
     const data = await res.json();
     setMessage(data.message);
   };

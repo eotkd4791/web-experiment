@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo } from 'react';
 
 type Props = {
   onClick: () => void;
@@ -9,7 +9,7 @@ export default memo(function ManyRendering({ onClick }: Props) {
     <ol>
       {Array.from({ length: 100 }, (_, i) => {
         if (i === 99) {
-          console.log("99th logged");
+          console.log('99th logged');
         }
         return (
           <li key={i} onClick={onClick}>

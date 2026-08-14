@@ -1,7 +1,7 @@
 export const enum Status {
-  SUCCESS = "SUCCESS",
-  BAD_REQUEST = "BAD_REQUEST",
-  NETWORK_ERROR = "NETWORK_ERROR",
+  SUCCESS = 'SUCCESS',
+  BAD_REQUEST = 'BAD_REQUEST',
+  NETWORK_ERROR = 'NETWORK_ERROR',
 }
 
 export const a = (status: keyof typeof Status) => {
