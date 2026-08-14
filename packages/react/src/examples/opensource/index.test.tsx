@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest';
-import { yupSchema } from '.';
+import { yupSchema } from './schema';
 
 test('yup schema', async () => {
   const userInput = { name: 'kk', key: 'CA' };
