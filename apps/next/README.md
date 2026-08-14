@@ -1,24 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js application
 
-## Getting Started
+This workspace runs Next.js 16.3.
 
-First, run the development server:
+## Getting started
+
+From the repository root:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm dev:next
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Or from this workspace:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000). Edit `src/app/page.tsx`; the page auto-updates during development.
+
+## Checks
+
+```bash
+pnpm --filter @app/next typecheck
+pnpm test:next
+```
 
 ## Learn More
 
