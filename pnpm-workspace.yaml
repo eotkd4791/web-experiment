@@ -9,6 +9,9 @@ allowBuilds:
   msw: true
   sharp: true
   unrs-resolver: true
+  workerd: true
+minimumReleaseAgeExclude:
+  - hono@4.13.2
 onlyBuiltDependencies:
   - '@nestjs/core'
   - '@scarf/scarf'

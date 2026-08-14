@@ -1,5 +1,5 @@
 {
-  "name": "@we/shared",
+  "name": "@package/shared",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

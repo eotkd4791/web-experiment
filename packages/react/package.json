@@ -1,5 +1,5 @@
 {
-  "name": "@we/react",
+  "name": "@package/react",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -29,7 +29,7 @@
     "@toss/react": "^1.8.1",
     "@use-funnel/browser": "^0.0.15",
     "@use-funnel/react-router-dom": "^0.0.14",
-    "@we/shared": "workspace:*",
+    "@package/shared": "workspace:*",
     "ajv": "^8.20.0",
     "axios": "^1.17.0",
     "browser-image-compression": "^2.0.2",
