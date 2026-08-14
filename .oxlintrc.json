@@ -9,27 +9,36 @@
   },
   "ignorePatterns": [
     "dist/**",
-    "apps/api/eslint.config.mjs",
-    "apps/ssr/.next/**",
-    "apps/ssr/out/**",
-    "apps/ssr/build/**",
-    "apps/ssr/next-env.d.ts"
+    "apps/next/.next/**",
+    "apps/next/out/**",
+    "apps/next/build/**",
+    "apps/next/next-env.d.ts",
+    "apps/storybook/storybook-static/**"
   ],
   "overrides": [
     {
-      "files": ["apps/api/{src,apps,libs,test}/**/*.ts"],
+      "files": ["apps/api/src/**/*.{ts,tsx}"],
       "env": {
-        "node": true,
-        "jest": true
+        "node": true
       },
       "rules": {
-        "typescript/no-explicit-any": "off",
-        "typescript/no-floating-promises": "warn",
-        "typescript/no-unsafe-argument": "warn"
+        "typescript/no-explicit-any": "off"
       }
     },
     {
-      "files": ["apps/ssr/**/*.{ts,tsx}"],
+      "files": [
+        "packages/react/src/**/*.{ts,tsx}",
+        "packages/shared/components/**/*.{ts,tsx}",
+        "apps/storybook/**/*.tsx"
+      ],
+      "rules": {
+        "react/rules-of-hooks": "error",
+        "react/exhaustive-deps": "warn",
+        "react/only-export-components": ["warn", { "allowConstantExport": true }]
+      }
+    },
+    {
+      "files": ["apps/next/**/*.{ts,tsx}"],
       "env": {
         "node": true
       },
