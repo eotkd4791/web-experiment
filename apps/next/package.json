@@ -10,28 +10,27 @@
     "test": "vitest"
   },
   "dependencies": {
-    "next": "16.0.0",
+    "next": "16.3.0",
     "react": "19.2.0",
     "react-dom": "19.2.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.0",
-    "@testing-library/jest-dom": "^6.9.1",
-    "@testing-library/react": "^16.3.2",
-    "@testing-library/user-event": "^14.6.1",
+    "@testing-library/jest-dom": "catalog:",
+    "@testing-library/react": "catalog:",
+    "@testing-library/user-event": "catalog:",
     "@types/node": "^20.19.42",
-    "@types/react": "^19.2.17",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^5.2.0",
-    "@vitest/ui": "^4.1.8",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
+    "@vitest/ui": "4.1.10",
     "baseline-browser-mapping": "^2.10.34",
-    "eslint": "^9.39.4",
-    "eslint-config-next": "16.0.0",
-    "jsdom": "^27.4.0",
-    "msw": "^2.14.6",
-    "tailwindcss": "^4.3.0",
-    "typescript": "^5.9.3",
-    "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "^3.2.6"
+    "eslint": "catalog:",
+    "eslint-config-next": "16.3.0",
+    "jsdom": "catalog:",
+    "msw": "catalog:",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
   }
 }
