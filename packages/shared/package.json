@@ -6,10 +6,6 @@
     "./components/Button": "./components/Button.tsx"
   },
   "scripts": {
-    "lint": "oxlint --config ../../.oxlintrc.json --no-error-on-unmatched-pattern .",
-    "lint:fix": "oxlint --config ../../.oxlintrc.json --no-error-on-unmatched-pattern --fix .",
-    "format": "oxfmt --config ../../.oxfmtrc.json --write .",
-    "format:check": "oxfmt --config ../../.oxfmtrc.json --check .",
     "typecheck": "tsc --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

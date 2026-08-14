@@ -5,10 +5,6 @@
   "scripts": {
     "storybook": "storybook dev --port 6006",
     "build-storybook": "storybook build",
-    "lint": "oxlint --config ../../.oxlintrc.json .storybook && eslint .storybook",
-    "lint:fix": "oxlint --config ../../.oxlintrc.json --fix .storybook && eslint --fix .storybook",
-    "format": "oxfmt --config ../../.oxfmtrc.json --write .storybook tsconfig.json",
-    "format:check": "oxfmt --config ../../.oxfmtrc.json --check .storybook tsconfig.json",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
