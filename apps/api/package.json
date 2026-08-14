@@ -7,6 +7,10 @@
     "preview": "$npm_execpath run build && vite preview",
     "deploy": "$npm_execpath run build && wrangler deploy",
     "cf-typegen": "wrangler types --env-interface CloudflareBindings",
+    "lint": "oxlint --config ../../.oxlintrc.json src && eslint src",
+    "lint:fix": "oxlint --config ../../.oxlintrc.json --fix src && eslint --fix src",
+    "format": "oxfmt --config ../../.oxfmtrc.json --write src",
+    "format:check": "oxfmt --config ../../.oxfmtrc.json --check src",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

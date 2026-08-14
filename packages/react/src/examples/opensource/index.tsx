@@ -40,10 +40,6 @@ export function YupResolver() {
     (error) => console.error(error),
   );
 
-  useEffect(() => {
-    setCountry('CA');
-  }, []);
-
   return (
     <div>
       {country}

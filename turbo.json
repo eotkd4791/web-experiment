@@ -5,8 +5,10 @@
       "cache": true,
       "outputs": ["dist/**"]
     },
-    "check-types": {
-      "dependsOn": ["^check-types"]
+    "typecheck": {
+      "dependsOn": ["^typecheck"],
+      "cache": true,
+      "outputs": []
     },
     "dev": {
       "persistent": true,

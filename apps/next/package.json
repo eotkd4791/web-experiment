@@ -10,6 +10,7 @@
     "lint:fix": "oxlint --config ../../.oxlintrc.json --fix . && eslint --fix .",
     "format": "oxfmt --config ../../.oxfmtrc.json --write .",
     "format:check": "oxfmt --config ../../.oxfmtrc.json --check .",
+    "typecheck": "tsc --noEmit",
     "test": "vitest"
   },
   "dependencies": {

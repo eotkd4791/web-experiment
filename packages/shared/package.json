@@ -8,6 +8,7 @@
     "lint:fix": "oxlint --config ../../.oxlintrc.json --no-error-on-unmatched-pattern --fix .",
     "format": "oxfmt --config ../../.oxfmtrc.json --write .",
     "format:check": "oxfmt --config ../../.oxfmtrc.json --check .",
+    "typecheck": "echo \"No TypeScript sources to check\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

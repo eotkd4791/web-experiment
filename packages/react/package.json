@@ -9,6 +9,7 @@
     "lint:fix": "oxlint --config ../../.oxlintrc.json --fix src && eslint --fix src",
     "format": "oxfmt --config ../../.oxfmtrc.json --write src",
     "format:check": "oxfmt --config ../../.oxfmtrc.json --check src",
+    "typecheck": "tsc --noEmit --project tsconfig.app.json && tsc --noEmit --project tsconfig.node.json",
     "test": "vitest"
   },
   "keywords": [],
