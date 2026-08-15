@@ -27,7 +27,6 @@ catalogs:
     '@types/node': ^24.13.1
 
 allowBuilds:
-  '@nestjs/core': true
   '@scarf/scarf': true
   '@swc/core': true
   esbuild: true
@@ -35,12 +34,3 @@ allowBuilds:
   sharp: true
   unrs-resolver: true
   workerd: true
-minimumReleaseAgeExclude:
-  - hono@4.13.2
-onlyBuiltDependencies:
-  - '@nestjs/core'
-  - '@scarf/scarf'
-  - esbuild
-  - msw
-  - sharp
-  - unrs-resolver
